@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<settings>
+<connections>
+	<server>162.241.154.60</server>
+	<!--<server-utl>51.145.129.167</server> -->
+	<!-- <server>166.62.41.104</server> -->
+	<bdlserver>132.148.149.74</bdlserver>
+	<localdb>KSA-IT-MANAGER</localdb>
+	<lpath>C:\atq.projects\iffWinApp64\iffWinApp64\bin\Debug</lpath>	
+	<edocs>C:\atq.projects\iffWinApp64\iffWinApp64\bin\Debug\eDocs</edocs>
+	<excelFilesLocation>C:\atq.projects\iffWinApp64\iffWinApp64\bin\Debug\excel files</excelFilesLocation>
+	<mdbpath>C:\iffWinApp64LandTransport</mdbpath>
+</connections>
+</settings>

@@ -1,0 +1,5 @@
+Alter view
+jobFileSearch_viewY2013
+
+Alter Table
+actMaster_SEA.totaltrips smallint not null default 0

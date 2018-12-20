@@ -1,0 +1,197 @@
+20-7-2018
+update view cities_View
+SELECT ct.recID, ct.name AS City, ISNULL(co.name, 'N/A') AS Country, co.shortname AS CountryCode
+FROM     dbo.cities AS ct LEFT OUTER JOIN
+                  dbo.countries AS co ON ct.countryID = co.recID
+
+
+
+
+alter table actMaster_SEA add polCountryCD varchar(10) not null default 'N/A'
+alter table actMaster_SEA add podCountryCD varchar(10) not null default 'N/A'
+alter table actmaster_sea add unloco1 char(5) not null default ''
+alter table actmaster_sea add unloco2 char(5) not null default ''
+
+update a set polcountrycd=co.shortname from actMaster_SEA a inner join countries co on a.pol_country=co.name
+update a set podCountryCD=co.shortname from actMaster_SEA a inner join countries co on a.pod_country=co.name
+
+
+
+alter view [jobFileSearch_viewY2013]
+dbo.actMaster_SEA.polCountryCD, dbo.actMaster_SEA.podCountryCD,pol_country [PolCountryName],pod_country [PoDCountryName]
+
+new table
+CREATE TABLE [dbo].[unloco]
+
+link in organization address to unlocode
+and link in organization column unlocode to unlocode table col code
+
+
+alter table branch add customizerptpath varchar(50)
+
+
+alter table organization add unlocode char(5) not null default 'NA'
+alter table organization add IsCFSCYD tinyint not null default 0
+alter table organization add TariffRateHeaderID integer not null default 0
+alter table [dbo].[organizationAddress] add locID int not null default 0
+
+use iff2009
+
+alter table [dbo].[Waybills] add batchno int not null default 0
+alter table [dbo].[Waybills] add batchdate datetime 
+alter table [dbo].[Waybills] add batchslno varchar(10) not null default ''
+alter table [dbo].[Waybills] add batchblankdt tinyint not null default 0
+alter table [dbo].[Waybills] add unloco1 char(5) not null default 'NA'
+alter table [dbo].[Waybills] add unloco2 char(5) not null default 'NA'
+alter table [dbo].[Waybills] add goodsdesc varchar(180) not null default ''
+alter table [dbo].[Waybills] add goodsunittype varchar(20) not null default ''
+alter table [dbo].[Waybills] add orgIsBrokerRecID int not null default 0
+alter table [dbo].[Waybills] add wbRefNo varchar(20) not null default ''
+alter table [dbo].[Waybills] add companyowntruck tinyint not null default 0
+alter table [dbo].[Waybills] add AdditionalRoute varchar(50) not null default ''
+alter table [dbo].[Waybills] add itrno int not null default 0
+alter table [dbo].[Waybills] add itrdate datetime
+alter table [dbo].[Waybills] add itrrefno varchar(20) not null default ''
+alter table [dbo].[Waybills] add itrnote varchar(50) not null default ''
+alter table [dbo].[Waybills] add itruser1 varchar(20) not null default ''
+alter table [dbo].[Waybills] add itruser2 varchar(20) not null default ''
+
+
+
+alter table [dbo].[Waybills] add cntrEmptyReturned  datetime
+alter table [dbo].[Waybills] add WaitingTimePOL varchar(50) not null default ''
+alter table [dbo].[Waybills] add WaitingTimePOD varchar(50) not null default ''
+alter table [dbo].[Waybills] add equipID smallint not null default 0
+alter table [dbo].[Waybills] add orgIsTransporterID int not null default 0
+alter table [dbo].[Waybills] add TrkRtnToYard datetime
+alter table [dbo].[Waybills] add AdvanceCost float not null default 0
+alter table [dbo].[Waybills] add AdvanceCostNote varchar(50) not null default ''
+alter table [dbo].[Waybills] add VendorInv nvarchar(50) not null default ''
+alter table [dbo].[Waybills] add BrokerCost float not null default 0
+alter table [dbo].[Waybills] add BrokerCostNote varchar(50) not null default ''
+alter table [dbo].[Waybills] add BackLoadNotes varchar(50) not null default ''
+
+alter table [dbo].[Waybills] add revNote1 varchar(50) not null default ''
+alter table [dbo].[Waybills] add revNote2 varchar(50) not null default ''
+alter table [dbo].[Waybills] add cosNote1 varchar(50) not null default ''
+alter table waybills add accountrefno nvarchar(15) not null default 0
+alter table waybills add wbpost  bit not null default 0
+alter table waybills add itrAccountNote nvarchar(50) not null default ''
+alter table waybills add itrVendorInv nvarchar(20) not null default ''
+alter table waybills add itrVATAmt float not null default 0
+
+
+alter table [dbo].[Waybills] add UpdatedBy varchar(25) not null default ''
+alter table [dbo].[Waybills] add UpdatedOn datetime 
+
+
+alter table waybills add orgrecidPOL int not null default 0
+alter table waybills add orgrecidPOD int not null default 0
+
+
+alter table drivers add note varchar(50) not null default ''
+alter table drivers add isActive bit not null default 1
+alter table drivers add isActive bit not null default 1
+
+change the size of the column
+licexpirydt to nvarchar(20)
+
+
+
+alter table [dbo].[equipment] add platenumber varchar(20) not null default ''
+alter table users add isadmin bit not null default 0
+alter table usersAccess add landRatesForm bit not null default 0
+ alter table usersAccess add landModule64 bit not null default 0
+ alter table usersAccess add landbillAccess bit not null default 0
+ alter table usersAccess add landGenerateWaybill bit not null default 0
+ alter table usersAccess add landUpdateWaybill bit not null default 0
+ alter table usersAccess add landBillingTabAccess bit not null default 0
+ alter table usersAccess add landAllowToChangeITRRate bit not null default 0
+alter table usersAccess add landITRPost bit not null default 0
+ alter table usersAccess add iffVATBilling bit not null default 0
+alter table [dbo].[usersAccess] add landSetupMasterFiles bit not null default 0
+alter table usersAccess add landReportTab  bit not null default 0
+
+
+
+alter table [dbo].[chargeElements] add AddToWaybillAuto bit not null default 0
+
+INSERT INTO chargeElements(code,shortname,name,fullname) VALUES(945,'DTRIP','Driver Trip Incentive','DTRIP-Driver Trip Incentive')
+INSERT INTO chargeElements(code,shortname,name,fullname) VALUES(946,'COMM','Broker Commission','COMM-Broker Commission')
+update [chargeElements] set AddToWaybillAuto=1 where shortname in ('DTRIP','TRK','OTHER','COMM')
+
+
+
+NEW TABLE - EquipmentGroup with Data
+NEW TABLE - WaybillCosting
+ALTER TABLE - Equipment 
+update Waybills set equipType=0 where equipType is null
+
+new taBLE - TariffRatesHeader
+NEW TABLE - TariffRatesDriverTrip
+NEW TABLE - LocationMaster
+NEW TABLE - EquipmentTypes
+
+NEW VIEW - viewOrganizationRates
+NEW VIEW - viewQueryWaybillRecord2018
+NEW VIEW - viewDriverTripRates_TTS
+
+
+insert into locationmaster (unloco,area) select code, name from [unloco] where countrycode in ('SA')
+
+
+NEW STORED PROC - CopyRatesFromOrganization
+
+
+JEDEX DONE---
+
+
+NEW TABLE - TransportReportMenuList
+NEW VIEW - viewTransportDispatchTTS
+viewQueryWaybillRecord2018
+viewTransportProfitibilityTTS
+new viewARBillForFinalPrintTTS
+viewARBillsForApproval
+viewJobProfitibilityTTS
+
+
+
+alter table organization add webaccessblock bit not null default 0
+alter table [reportParam] add new fields
+alter table waybills add invno integer not null default 0
+alter table waybills billingRecID	int not null default 0
+alter table waybills add [wbstatus] varchar(15) not null default 'NEW'
+alter table waybills add [wbcancelled] tinyint not null default 0
+alter table waybills add itrpost bit not null default 0
+alter table waybillcosting add vatcostpercent float not null default 0
+
+
+alter table waybills add polorgaddrrecid	int	Checked
+alter table waybills add podorgaddrrecid1	int	Checked
+
+
+
+alter table equipmentgroup add slno smallint not null default 0
+
+alter table locationmaster add countrycode varchar(2) not null default ''
+
+
+
+alter table reportParam add rptcode	varchar(50)	Checked
+
+alter table billing add linkedtowaybills tiny int not null default  0
+
+alter table organization add 
+ShortName	varchar(10)	Unchecked not null default ''
+
+create  PROCEDURE [dbo].[spWaybillRevenueTTS]
+
+alter table billings 
+sellrefno	nvarchar(50)	Unchecked
+
+
+
+
+https://dlca.logcluster.org/display/LOG/Fleet+Management
+http://vb.net-informations.com/crystal-report/vb.net_crystal_report_parameter_string.htm
+

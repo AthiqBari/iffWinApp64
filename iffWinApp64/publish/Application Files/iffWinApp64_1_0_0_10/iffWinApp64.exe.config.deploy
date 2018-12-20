@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="iffWinApp64.My.MySettings.remote_gesksa" connectionString="Data Source=166.62.41.104;Initial Catalog=iff2009;Persist Security Info=True;User ID=sa;Password=Admin@123"
+            providerName="System.Data.SqlClient" />
+        <add name="iffWinApp64.My.MySettings.remote_solitaire" connectionString="Data Source=51.145.129.167;Initial Catalog=iff2009;Persist Security Info=True;User ID=sa;Password=Admin@123"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    <startup useLegacyV2RuntimeActivationPolicy="true">
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+</configuration>

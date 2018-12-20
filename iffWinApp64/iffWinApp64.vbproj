@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FE092C5-56C8-45BD-818E-0C22A1687939}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>iffWinApp64.My.MyApplication</StartupObject>
+    <RootNamespace>iffWinApp64</RootNamespace>
+    <AssemblyName>iffWinApp64</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>C:\atq.projects\iffWinApp64\iffWinApp64\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>iffUtility</ProductName>
+    <PublisherName>athiq</PublisherName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>iffWinApp64.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>iffWinApp64.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>10B32AA2668F215B2D2E3862CEC96300F5613F32</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>iffWinApp64_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>forms\images\iiflogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CTradeListOfValues, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CTradeListOfValues.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <HintPath>..\..\MicrosoftOfficeAssemblies\Interop.Microsoft.Office.Core.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\MicrosoftOfficeAssemblies\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MT.WindowsUI, Version=2.6.4.0, Culture=neutral, PublicKeyToken=6a0e81d0b9165633, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MT.WindowsUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Telerik.Reporting, Version=10.2.16.1025, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=10.2.16.1025, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls, Version=2016.3.1024.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TelerikAssemblies\2016.3.1024.40\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.3.1024.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TelerikAssemblies\2016.3.1024.40\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.3.1024.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TelerikAssemblies\2016.3.1024.40\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="clsParam.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="forms\appSettings.vb" />
+    <Compile Include="forms\clsARBill.vb" />
+    <Compile Include="forms\clsARBillItems.vb" />
+    <Compile Include="forms\clsCompanyAndBranch.vb" />
+    <Compile Include="forms\clsLogFile.vb" />
+    <Compile Include="forms\clsUserInfo.vb" />
+    <Compile Include="forms\clsUserRights.vb" />
+    <Compile Include="forms\frmAddAddress.Designer.vb">
+      <DependentUpon>frmAddAddress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmAddAddress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmBilling.Designer.vb">
+      <DependentUpon>frmBilling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmBilling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmUnlocoForm.Designer.vb">
+      <DependentUpon>frmUnlocoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmUnlocoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLocationMaster.Designer.vb">
+      <DependentUpon>frmLocationMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLocationMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDrivers.Designer.vb">
+      <DependentUpon>frmDrivers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmDrivers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmEquipment.Designer.vb">
+      <DependentUpon>frmEquipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmEquipment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmEqpGroup.Designer.vb">
+      <DependentUpon>frmEqpGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmEqpGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmITRPost.Designer.vb">
+      <DependentUpon>frmITRPost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmITRPost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmJobAndWaybill.Designer.vb">
+      <DependentUpon>frmJobAndWaybill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmJobAndWaybill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmOrganizationData.Designer.vb">
+      <DependentUpon>frmOrganizationData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmOrganizationData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmQuotationPrint.Designer.vb">
+      <DependentUpon>frmQuotationPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmQuotationPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRateInput.Designer.vb">
+      <DependentUpon>frmRateInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRateInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRates.Designer.vb">
+      <DependentUpon>frmRates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRentalChargesITR.Designer.vb">
+      <DependentUpon>frmRentalChargesITR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRentalChargesITR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmReports.Designer.vb">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmTransportReport.Designer.vb">
+      <DependentUpon>frmTransportReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmTransportReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmTripRatesListForm.Designer.vb">
+      <DependentUpon>frmTripRatesListForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmTripRatesListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmUpdateWaybill.Designer.vb">
+      <DependentUpon>frmUpdateWaybill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmUpdateWaybill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmUserRights.Designer.vb">
+      <DependentUpon>frmUserRights.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmUserRights.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmInvoiceSellingChargeList.Designer.vb">
+      <DependentUpon>frmInvoiceSellingChargeList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmInvoiceSellingChargeList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmWaybillSellingChargeList.Designer.vb">
+      <DependentUpon>frmWaybillSellingChargeList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmWaybillSellingChargeList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\iffMainMenu.Designer.vb">
+      <DependentUpon>iffMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\iffMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmChargeCodeMaster.Designer.vb">
+      <DependentUpon>frmChargeCodeMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmChargeCodeMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmCrystalReportViewer.Designer.vb">
+      <DependentUpon>frmCrystalReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmCrystalReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Report1.Designer.vb">
+      <DependentUpon>Report1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Report1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="iffWaybillITR002.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iffWaybillITR002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="iffWaybillTTS004.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iffWaybillTTS004.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="modCommonLib.vb" />
+    <Compile Include="modExcelLib.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report2.Designer.vb">
+      <DependentUpon>Report2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="forms\waitform.designer.vb">
+      <DependentUpon>waitform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\waitform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\frmAddAddress.resx">
+      <DependentUpon>frmAddAddress.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmBilling.resx">
+      <DependentUpon>frmBilling.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmUnlocoForm.resx">
+      <DependentUpon>frmUnlocoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLocationMaster.resx">
+      <DependentUpon>frmLocationMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmDrivers.resx">
+      <DependentUpon>frmDrivers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmEquipment.resx">
+      <DependentUpon>frmEquipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmEqpGroup.resx">
+      <DependentUpon>frmEqpGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmITRPost.resx">
+      <DependentUpon>frmITRPost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmJobAndWaybill.resx">
+      <DependentUpon>frmJobAndWaybill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmOrganizationData.resx">
+      <DependentUpon>frmOrganizationData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmQuotationPrint.resx">
+      <DependentUpon>frmQuotationPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRateInput.resx">
+      <DependentUpon>frmRateInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRates.resx">
+      <DependentUpon>frmRates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRentalChargesITR.resx">
+      <DependentUpon>frmRentalChargesITR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmReports.resx">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmTransportReport.resx">
+      <DependentUpon>frmTransportReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmTripRatesListForm.resx">
+      <DependentUpon>frmTripRatesListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmUpdateWaybill.resx">
+      <DependentUpon>frmUpdateWaybill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmUserRights.resx">
+      <DependentUpon>frmUserRights.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmInvoiceSellingChargeList.resx">
+      <DependentUpon>frmInvoiceSellingChargeList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmWaybillSellingChargeList.resx">
+      <DependentUpon>frmWaybillSellingChargeList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\iffMainMenu.resx">
+      <DependentUpon>iffMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmChargeCodeMaster.resx">
+      <DependentUpon>frmChargeCodeMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmCrystalReportViewer.resx">
+      <DependentUpon>frmCrystalReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="iffWaybillITR002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>iffWaybillITR002.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="iffWaybillTTS004.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>iffWaybillTTS004.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\waitform.resx">
+      <DependentUpon>waitform.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="iffWinApp64_TemporaryKey - Copy.pfx" />
+    <None Include="iffWinApp64_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Telerik.Reporting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.GridView">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="TelerikCommon">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="forms\images\orgICO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="forms\images\setting1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="forms\images\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="forms\images\iiflogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="forms\images\invoice-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="forms\images\reports.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="forms\images\blue-mail-icon16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
